@@ -11,21 +11,48 @@
 body {
   position: relative;
   min-width: 240px;
+  font-family: "SourceSansPro Regular";
+}
+
+a, a:visited, a:focus {
+  outline: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 header {
-  height: 45px;
-  border-bottom: 1px solid rgb(212,212,212);
-  background-color: rgb(237,237,237);
+  position: relative;
+  height: 72px;
+  margin-bottom: 20px;
 }
 
 section {
-  padding: 80px 0 20px;
   text-align: center;
   font-size: 95%;
-  font-family: "SourceSansPro Regular";
-  border: 1px solid rgb(237,237,237);
-  border-width: 1px 0;
+}
+
+section:not(:first-of-type)::before {
+  content: "";
+  display: block;
+  width: 170px;
+  margin: 20px auto;
+  border-top: 1px solid rgb(237,237,237);
+  border-bottom: 1px solid rgb(250,250,250);
+}
+
+/* HEADER */
+
+header::before {
+  content: "";
+  display: block;
+  height: 45px;
+  border-bottom: 1px solid rgb(212,212,212);
+  background-color: rgb(237,237,237);
+  box-shadow: 0 1px 1px rgb(237,237,237);
 }
 
 #logo {
@@ -38,36 +65,40 @@ section {
   border: 1px solid rgb(230,230,230);
   background-image: url(images/logo.png);
   background-size: cover;
+  box-shadow: 1px 1px 1px rgb(230,230,230);
 }
 
-#logo:focus {
-  outline: none;
+/* SECTION: REDIRECTS */
+
+#redirects {
+  color: rgb(150,150,150);
 }
 
-.hline {
-  width: 170px;
-  margin: 10px auto;
-  border-top: 1px solid rgb(237,237,237);
-  border-bottom: 1px solid rgb(250,250,250);
+#redirects-chk {
+  vertical-align: bottom;
 }
 
-#share {
-  overflow: hidden;
+/* SECTION: SHARE */
+
+#share-items {
   padding: 0;
   width: 184px;
   margin: 10px auto 0;
   list-style-type: none;
+  font-size: 0;
 }
 
 .share-item {
-  float: left;
-  width: 32px;
-  height: 32px;
+  display: inline-block;
   background-size: cover;
 }
 
 .share-item:not(:last-child) {
   margin-right: 6px;
+}
+
+.share-item:hover {
+  box-shadow: 0 0 2px rgb(146,146,146);
 }
 
 .share-item-fb {
@@ -118,25 +149,21 @@ section {
   height: 32px;
 }
 
-.share-link:focus {
-  outline: none;
-}
+/* FOOTER */
 
 footer {
   height: 35px;
+  margin-top: 20px;
   line-height: 30px;
   text-align: center;
   background-color: rgb(237,237,237);
   border-top: 1px solid rgb(212,212,212);
+  box-shadow: 0 -1px 1px rgb(237,237,237);
 }
 
-#footer-link {
+#footer-link,
+#footer-link:visited {
   color: rgb(146,146,146);
   font-size: 75%;
   font-family: "SourceSansPro Light";
-  text-decoration: none;
-}
-
-#footer-link:hover {
-  text-decoration: underline;
 }
