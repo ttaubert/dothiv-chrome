@@ -14,22 +14,6 @@ body {
   font-family: "SourceSansPro Regular";
 }
 
-a, a:visited, a:focus {
-  outline: none;
-  color: inherit;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-header {
-  position: relative;
-  height: 72px;
-  margin-bottom: 20px;
-}
-
 section {
   text-align: center;
   font-size: 95%;
@@ -44,7 +28,23 @@ section:not(:first-of-type)::before {
   border-bottom: 1px solid rgb(250,250,250);
 }
 
+a, a:visited, a:focus {
+  outline: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 /* HEADER */
+
+header {
+  position: relative;
+  height: 72px;
+  margin-bottom: 30px;
+}
 
 header::before {
   content: "";
@@ -66,6 +66,17 @@ header::before {
   background-image: url(images/logo.png);
   background-size: cover;
   box-shadow: 1px 1px 1px rgb(230,230,230);
+}
+
+/* SECTION: STATUS */
+
+#status {
+ line-height: 1.5em;
+ white-space: pre-line;
+}
+
+.dot-hiv {
+ color: rgb(226,0,121);
 }
 
 /* SECTION: REDIRECTS */
